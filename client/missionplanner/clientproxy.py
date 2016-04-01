@@ -38,14 +38,17 @@ if __name__ == '__main__':
     parser.add_argument(
         '--url',
         dest='url',
-        help='Interoperability Server URL, example: http://10.10.130.10:80')
+        help='Interoperability Server URL, example: http://10.10.130.10:80',
+        required=True)
     parser.add_argument(
         '--username',
         dest='username',
-        help='Interoperability Username, example: calpoly-broncos')
+        help='Interoperability Username, example: calpoly-broncos',
+        required=True)
     parser.add_argument('--password',
                         dest='password',
-                        help='Interoperability Password, example: 4597630144')
+                        help='Interoperability Password, example: 4597630144',
+                        required=True)
 
     cmd_args = parser.parse_args()
     relay = RelayService(url=cmd_args.url,
